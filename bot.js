@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`DTM system`,'!help','Type !help',`${client.users.size} Members`,'DTM','By: Legend_FH'];
+    var setGame = [`!New if want help`];
     var i = -1;
     var j = 0;
     setInterval(function (){
