@@ -1396,7 +1396,7 @@ const moment = ('moment');
 /*عواصم*/
 
 
-var UserBlocked = new Set(); // create a new set to save users id.
+
 
 var aoasm =[
     {q:"ما عاصمة **افغانستان**",a:"كبل"},
