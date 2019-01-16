@@ -2037,20 +2037,7 @@ if(!message.channel.guild) return;
 
 /*awsm*/
 
-client.on('message', message => {
-if (message.content.startsWith(prefix + 'نقاطي')) {
-	if(!message.channel.guild) return
-	let userData = points[message.author.id];
-	let embed = new Discord.RichEmbed()
-    .setAuthor(`${message.author.tag}`, message.author.avatarURL)
-	.setColor('#000000')
-	.setDescription(`نقاطك: \`${userData.points}\``)
-	message.channel.sendEmbed(embed)
-  }
-  fs.writeFile("./json/awsmm.json", JSON.stringify(points), (err) => {
-    if (err) console.error(err)
-  })
-});
+
 
 /*nickname*/
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
