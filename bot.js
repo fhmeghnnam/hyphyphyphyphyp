@@ -60,14 +60,7 @@ client.on('ready', function(){
 
 
 
-client.on("ready", () => { // ??? ?????
-function lol() 
-{     client.guilds.get('523211709914284033')
-.roles.find("name", "? Legend")
-.setColor("RANDOM");   };   
-setInterval(lol, 20000); 
-}
-);
+
 
 
 client.on('ready',  () => {
