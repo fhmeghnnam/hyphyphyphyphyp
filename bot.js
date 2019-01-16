@@ -1784,52 +1784,7 @@ ${prefix}role humans اسم الرتبة
 
 /*translate*/
    
-const translate = require('google-translate-api');
-const Langs = ['afrikaans', 'albanian', 'amharic', 'arabic', 'armenian', 'azerbaijani', 'bangla', 'basque', 'belarusian', 'bengali', 'bosnian', 'bulgarian', 'burmese', 'catalan', 'cebuano', 'chichewa', 'chinese simplified', 'chinese traditional', 'corsican', 'croatian', 'czech', 'danish', 'dutch', 'english', 'esperanto', 'estonian', 'filipino', 'finnish', 'french', 'frisian', 'galician', 'georgian', 'german', 'greek', 'gujarati', 'haitian creole', 'hausa', 'hawaiian', 'hebrew', 'hindi', 'hmong', 'hungarian', 'icelandic', 'igbo', 'indonesian', 'irish', 'italian', 'japanese', 'javanese', 'kannada', 'kazakh', 'khmer', 'korean', 'kurdish (kurmanji)', 'kyrgyz', 'lao', 'latin', 'latvian', 'lithuanian', 'luxembourgish', 'macedonian', 'malagasy', 'malay', 'malayalam', 'maltese', 'maori', 'marathi', 'mongolian', 'myanmar (burmese)', 'nepali', 'norwegian', 'nyanja', 'pashto', 'persian', 'polish', 'portugese', 'punjabi', 'romanian', 'russian', 'samoan', 'scottish gaelic', 'serbian', 'sesotho', 'shona', 'sindhi', 'sinhala', 'slovak', 'slovenian', 'somali', 'spanish', 'sundanese', 'swahili', 'swedish', 'tajik', 'tamil', 'telugu', 'thai', 'turkish', 'ukrainian', 'urdu', 'uzbek', 'vietnamese', 'welsh', 'xhosa', 'yiddish', 'yoruba', 'zulu'];
-
-client.on('message', message => {
-if (message.content.startsWith(prefix + 'translate')) {
-    let args = message.content.split(" ").slice(1);
-    if (!args[0]) {
-    
-        const embed = new Discord.RichEmbed()
-            .setColor("FFFFFF")
-            .setDescription("**ترجمة الكتابة.**\استعمل: `+translate <الكمة لتبي> <االغة>`");
-
-        return message.channel.send(embed);
-
-    } else {
-
-        if (args.length === undefined) {
-
-            return message.channel.send("**ترجمة الكتابة.**\استعمل: `+translate <الكمة لتبي> <االغة>`");
-
-        } else {
-
-            let transArg = args[0].toLowerCase();
-
-            args = args.join(' ').slice(1)
-            let translation;
-
-            if (!Langs.includes(transArg)) return message.channel.send(`**Language not found.**`);
-            args = args.slice(transArg.length);
-
-            translate(args, {
-                to: transArg
-            }).then(res => {
-
-                const embed = new Discord.RichEmbed()
-                    .setAuthor("Translator", client.user.displayAvatarURL)
-                    .addField(`Input`, `\`\`\`${args}\`\`\``)
-                    .setColor("#42f4c8")
-                    .addField(`Output`, `\`\`\`${res.text}\`\`\``);
-                return message.channel.send(embed);
-            });
-        }
-    }
-}
-});
-
+c
 /*tag*/
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////ALPHA / ALPHA CODES / ALPHA CODES///////////
@@ -1872,67 +1827,13 @@ if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');
    
 /*short*/
 
-const shorten = require('isgd');
-client.on('message', message => {
- if (message.content.startsWith(prefix + 'short')) {
-    let args = message.content.split(" ").slice(1);
-  if (!args[0]) return message.channel.send('**Usage**: '+ prefix +'short <رابط>')
-  if (!args[1]) { 
-    shorten.shorten(args[0], function(res) {
-      if (res.startsWith('Error:')) return message.channel.send('**Usage**: '+ prefix +'short <link>');
-      message.channel.send(`اختصار الرابط:**<${res}>**`); 
-    })
-  } else { 
-    shorten.custom(args[0], args[1], function(res) { 
-      if (res.startsWith('Error:')) return message.channel.send(`اختصار الرابط:**${res}**`); 
-      message.channel.send(`اختصار الرابط:**<${res}>**`); 
- })}}});   
+
  
- 
- const googl = require('goo.gl');
-client.on('message', message => {
- let args = message.content.split(' ').slice(1);
-    if(message.content.startsWith(prefix + 'short1')) {
-    if(!message.channel.guild) return;  
 
-        googl.setKey('AIzaSyC2Z2mZ_nZTcSvh3QvIyrmOIFP6Ra6co6w');
-        googl.getKey();
-        googl.shorten(args.join(' ')).then(shorturl => {
-            message.channel.send(''+shorturl)
-        }).catch(e=>{
-            console.log(e.message);
-            message.channel.send('Error!');
-        });
-
-    }
-
-});
    
 /*math*/
 
-const math = require('math-expression-evaluator');
-const stripIndents = require('common-tags').stripIndents;
 
-client.on('message', msg => {
- if (msg.content.startsWith(prefix + 'calculate')) {
-    let args = msg.content.split(" ").slice(1);
-	    const question = args.join(' ');
-    if (args.length < 1) {
-        msg.reply('Specify a equation, please.');
-} else {    let answer;
-    try {
-        answer = math.eval(question);
-    } catch (err) {
-        msg.reply(`Error: ${err}`);
-    }
-    
-	const embed = new Discord.RichEmbed()
-	.addField("**Input**: ",`**${question}**`, true)
-	.addField("**Output**: ",`**${answer}**`, true)
-    msg.channel.send(embed)
-	}
-};
-});
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////ALPHA / ALPHA CODES / ALPHA CODES///////////
 ////ALPHA / ALPHA CODES / ALPHA CODES//////////////////////////////////////////////////////////////////////////////////////////////
