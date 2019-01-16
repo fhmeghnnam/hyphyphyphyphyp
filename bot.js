@@ -186,12 +186,7 @@ client.on("message", message => {
    
    **
    
-╭━━━┳╮╱╱╱╱╱╱╱ ╭━━╮╱╱╱╱╭╮
-┃╭━╮┃┃╱╱╱╱╱╱╱ ┃╭╮┃╱╱╱╭╯╰╮
-┃╰━╯┃┃╭╮╭┳━━╮ ┃╰╯╰┳━━╋╮╭╯
-┃╭━━┫┃┃┃┃┃━━┫ ┃╭━╮┃╭╮┃┃┃
-┃┃╱╱┃╰┫╰╯┣━━┃ ┃╰━╯┃╰╯┃┃╰╮
-╰╯╱╱╰━┻━━┻━━╯ ╰━━━┻━━╯╰━╯
+
    **
    
            ***General Commands***
@@ -255,7 +250,7 @@ client.on("message", message => {
    『soon』
     
              _ _---------------- _ _
-  BOT By: | <@374911904885506048> |-| <@311163751522893826> |-| <@407695930750402561> |
+  BOT By: Legend_FH |
 
    **
 
@@ -276,22 +271,6 @@ client.on('message', message => {
 
 /*زخرفت الاسم*/
 
- const zalgo = require('zalgolize');
- client.on('message', message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-
-  let args = message.content.split(" ").slice(1);
-if (command == "zalgo") {
-    let say = new Discord.RichEmbed()
-    .setTitle('Text emboss :');
-  message.reply(`\n ${zalgo(args.join(' '))}`);
-  }
-
-});
 
 /*اقتراح*/
 
