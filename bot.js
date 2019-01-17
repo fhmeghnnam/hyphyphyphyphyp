@@ -38,4 +38,7 @@ client.on('ready', () => {
   channel.join()
 });
 
+client.user.setPresence({ game: { name: 'Never Die' }, status: 'online'
+ });
+
 client.login(process.env.BOT_TOKEN);
