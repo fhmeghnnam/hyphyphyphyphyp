@@ -34,11 +34,18 @@ var ti={}
 ,attentions={};
 
 client.on('ready', () => {
-  let channel = client.channels.get('535130857166471169');
+  let channel = client.channels.get('535564829197467659');
   channel.join()
 });
 
-client.user.setPresence({ game: { name: 'Never Die' }, status: 'online'
- });
-
+bot.on('ready', () => {
+    bot.user.setStatus('available')
+    bot.user.setPresence({
+        game: {
+            name: 'Legends Gang !!',
+            type: "STREAMING",
+            url: "https://www.twitch.tv/monstercat"
+        }
+    });
+});
 client.login(process.env.BOT_TOKEN);
