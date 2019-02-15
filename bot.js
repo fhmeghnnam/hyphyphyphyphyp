@@ -34,7 +34,7 @@ var ti={}
 ,attentions={};
 
 client.on('ready', () => {
-  let channel = client.channels.get('535564829197467659');
+  let channel = client.channels.get('545326026062823434');
   channel.join()
 });
 
