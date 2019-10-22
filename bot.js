@@ -7,7 +7,7 @@ client.on('ready',async () => {
 
 client.on("ready", () => {
 
-client.user.setActivity(" فيزياء ");
+client.user.setActivity("Porn Hub");
 });
 
 
