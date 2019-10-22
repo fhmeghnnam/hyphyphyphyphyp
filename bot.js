@@ -6,7 +6,8 @@ client.on('ready',async () => {
 });
 
 client.on("ready", () => {
-    client.user.setStatus("online");
+
+client.user.setActivity(" فيزياء ");
 });
 
 
