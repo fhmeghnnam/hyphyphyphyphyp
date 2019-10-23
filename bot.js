@@ -7,7 +7,7 @@ client.on('ready',async () => {
 
 client.on("ready", () => {
 
-client.user.setActivity("PornHub");
+client.user.setActivity("انت مش انت وانت جعان");
 });
 
 
