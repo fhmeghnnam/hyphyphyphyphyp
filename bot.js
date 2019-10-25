@@ -7,7 +7,7 @@ client.on('ready',async () => {
 
 client.on("ready", () => {
 
-client.user.setActivity("انت مش انت وانت جعان");
+client.user.setActivity("Every moment is a fresh beginning. ...");
 });
 
 
