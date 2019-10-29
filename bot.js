@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 let prefix = "!"
 client.on('ready',async () => {
-  client.channels.find(ch => ch.id === "634898391285104645" && ch.type === 'voice').join();
+  client.channels.find(ch => ch.id === "636169225693691904" && ch.type === 'voice').join();
 });
 
 client.on("ready", () => {
