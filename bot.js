@@ -7,7 +7,7 @@ client.on('ready',async () => {
 
 client.on("ready", () => {
 
-client.user.setActivity("if you read this I love you");
+client.user.setActivity("Suck My Fuck");
 });
 
 
