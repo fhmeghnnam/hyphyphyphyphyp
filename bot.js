@@ -7,7 +7,7 @@ client.on('ready',async () => {
 
 client.on("ready", () => {
 
-client.user.setActivity("Suck My Fuck");
+client.user.setActivity("Send nudes in DM please ");
 });
 
 
